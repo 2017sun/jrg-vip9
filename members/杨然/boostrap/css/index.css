@@ -374,14 +374,251 @@ fieldset[disabled] .navbar-itcast .btn-link:focus {
 .panel-item > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ddd;
 }
+#products .tab-content {
+	padding: 15px 0;
+}
+#products .panel-item > .panel-heading {
+	background-color: transparent;
+	border-color: transparent;
+	float: right;
+    padding: 60px 0 0 0;
+    width: 120px;
+    height: 150px;
+    border-left: 1px dashed #ccc;
+    position: relative;
+}
+#products .panel-item > .panel-heading::before {
+	width: 20px;
+	height: 20px;
+	content:  '';
+	border-radius: 50%;
+	position: absolute;
+	background-color: #f0f0f0;
+	top: -10px;
+	left: -10px;
+}
+#products .panel-item > .panel-heading::after {
+	width: 20px;
+	height: 20px;
+	content:  '';
+	border-radius: 50%;
+	position: absolute;
+	background-color: #f0f0f0;
+    bottom: -10px;
+    left: -10px;
+}
+#products .panel-body {
+	margin-right: 120px;
+	height: 150px;
+}
+#products .panel {
+	border: none;
+	border-radius: 0;
+	box-shadow: 1px 1px 5px #ccc;
+	text-align: center;
+}
+#products .panel.panel-item.red {
+	background-color: red;
+	color: #fff;
+}
+#products .panel.panel-item.red .panel-heading {
+	color: #fff;
+}
+#products .panel.panel-item.red::before {
+    content: '\e915';
+    font-family: 'weijinsuo';
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
+#products .panel.panel-item.grey {
+	background-color: #e0e0e0;
+}
+#products .tab-content p {
+	margin-bottom: 0;
+}
+#products .panel-body sub {
+	bottom: 0;
+}
+#products .panel-heading > p {
+	font-size: 32px;
+	line-height: 16px;
+}
+#products .panel-heading > p sub {
+	font-size: 16px;
+}
+#products .panel-heading > p span {
+	font-size: 12px;
+}
 /*
- * 公共样式
+ * 新闻列表
  */
+#news {
+	padding: 50px;
+	border-bottom: 1px solid #c0c0c0;
+}
+#news .news-title {
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+	padding: 15px;
+	border-bottom: 1px dashed #c0c0c0;
+	position: relative;
+	margin-right: 10px;
+}
+#news .new-title::after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	border: 1px solid #c0c0c0;
+	position: absolute;
+	bottom: -5px;
+	right: -10px;
+}
+.icon-news01:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #EAEAEA;
+}
+#news .nav-pills > li {
+    margin-bottom: 15px;
+}
+#news .nav-pills > li > a {
+	background-color: #fff;
+	padding: 10px 10px;
+	text-align: center;
+	border-radius: 50%;
+	border: none;
+	height: 60px;
+	width: 60px;
+}
+#news .nav-pills > li > a:hover {
+	background-color: #e93222;
+}
+#news .nav-pills > li.active > a {
+	background-color: #e93222;
+}
+#news .tab-content ul {
+	padding-top: 10px;
+}
+#news .tab-content ul > li {
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+@media (max-width: 767px) {
+	#news .nav-stacked > li {
+		float: left;
+		margin-left: 40px;
+	}
+}
+@media (max-width: 414px) {
+	#news .nav-stacked > li {
+		float: left;
+		margin-left: 0px;
+	}
 
+}
 /*
- * 公共样式
+ * 合作伙伴
  */
+#cooperate {
 
+}
+.icon-uniE930:hover {
+  color: #df3232;
+}
+
+.icon-uniE930:before {
+  content: "\e946";
+}
+
+.icon-uniE92F:hover {
+  color: #e8380d;
+}
+
+.icon-uniE92F:before {
+  content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+  color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+  content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+  color: #159f69;
+}
+
+.icon-uniE92A:before {
+  content: "\e92a";
+}
+
+.icon-uniE929:hover {
+  color: #07569e;
+}
+
+.icon-uniE929:before {
+  content: "\e929";
+}
+
+.icon-uniE931:hover {
+  color: #004098;
+}
+
+.icon-uniE931:before {
+  content: "\e931";
+}
+
+.icon-uniE92C:hover {
+  color: #d32019;
+}
+
+.icon-uniE92C:before {
+  content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+  color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+  content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+  color: #2bb289;
+}
+
+.icon-uniE92D:before {
+  content: "\e92d";
+}
+#cooperate ul {
+}
+#cooperate ul > li {
+	line-height: 1;
+	padding: 0px 35px;
+	float: left;
+}
+#cooperate ul > li:nth-of-type(1) ~ li {
+	border-left: 1px dashed #c0c0c0;
+}
+#cooperate ul > li a {
+	font-size: 50px;
+	color: #c0c0c0;
+}
+#cooperate ul > li a:hover {
+	text-decoration: none;
+}
 /*
  * 页脚区域
- 
+ */
+#footer {
+	height: 200px;
+}
