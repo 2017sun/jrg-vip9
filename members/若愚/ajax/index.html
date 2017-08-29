@@ -83,7 +83,7 @@ function ajax(opts) {
     xmlhttp.onreadystatechange = function() {
 
       if (xmlhttp.readyState == 4) {
-        if (xmlhttp.status == 200) {
+        if (xmlhttp.status == 200 || xmlhttp.status == 304) {
           //如数据类型是 text, 则不解析
           if (opts.dataType === 'text') {
             opts.success(xmlhttp.responseText);

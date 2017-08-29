@@ -8,12 +8,20 @@
             background: red;
         }
     </style>
+    <script>
+        
+     function clickCancel(){
+        console.log('haha')
+     }
+
+
+    </script>
 </head>
 
 <body>
     <div class="wrap">
         <button id="btn">点我</button>
-        <button id="cancel">去掉</button>
+        <button id="cancel" onclick="clickCancel()">去掉</button>
     </div>
     <ul id="list">
         <li>111</li>
@@ -21,13 +29,35 @@
         <li>3333</li>
     </ul>
 
+    <script>
+        var cancel = document.querySelector('#cancel')
+        cancel.onclick = function(){
+            console.log('heihei')
+        }
+        cancel.onclick = function(){
+            console.log('haha')
+        }
+        cancel.addEventListener('click', function(){
+            console.log('hello')
+        })
+        cancel.addEventListener('click', function(){
+            console.log('world')
+        })
+        cancel.removeEventListener('click', function(){
+            console.log('hello')
+        })
+    </script>
+
+
+
+
     <button id="btn-add">添加元素</button>
     <script>
-        var body = document.body;
-        var wrap = $('.wrap');
-        var btn = $('#btn');
-        var cancelBtn = $('#btn');
-        var addBtn = $('#btn-add');
+        // var body = document.body;
+        // var wrap = $('.wrap');
+        // var btn = $('#btn');
+        // var cancelBtn = $('#btn');
+        // var addBtn = $('#btn-add');
         /*
                 btn.onclick = function() {
                     console.log('oncliked ...');
@@ -68,45 +98,45 @@
 
 
 
-        addBtn.addEventListener('click', function() {
-            var li = document.createElement('li');
-            li.innerText = '添加的元素';
-            // li.addEventListener('click', function(e) {
-            //     console.log(e.target.innerText);
-            // })
-            list.appendChild(li);
-        })
+        // addBtn.addEventListener('click', function() {
+        //     var li = document.createElement('li');
+        //     li.innerText = '添加的元素';
+        //     // li.addEventListener('click', function(e) {
+        //     //     console.log(e.target.innerText);
+        //     // })
+        //     list.appendChild(li);
+        // })
 
 
-        list.addEventListener('click', function(e) {
-            console.log(e.target.innerText);
-        });
+        // list.addEventListener('click', function(e) {
+        //     console.log(e.target.innerText);
+        // });
 
-        wrap.addEventListener('click', function() {
-            //console.log('hi, i am wrap');
-        }, true)
+        // wrap.addEventListener('click', function() {
+        //     //console.log('hi, i am wrap');
+        // }, true)
 
-        btn.addEventListener('click', function() {
-            // console.log('hi, i am btn');
-        }, true)
+        // btn.addEventListener('click', function() {
+        //     // console.log('hi, i am btn');
+        // }, true)
 
-        body.addEventListener('click', function() {
-            //console.log('i am body');
-        }, true)
-
-
-        window.addEventListener('click', function() {
-            //console.log('i am window')
-        }, true)
+        // body.addEventListener('click', function() {
+        //     //console.log('i am body');
+        // }, true)
 
 
-        function $(id) {
-            return document.querySelector(id);
-        }
+        // window.addEventListener('click', function() {
+        //     //console.log('i am window')
+        // }, true)
 
-        function $$(cls) {
-            return document.querySelectorAll(cls);
-        }
+
+        // function $(id) {
+        //     return document.querySelector(id);
+        // }
+
+        // function $$(cls) {
+        //     return document.querySelectorAll(cls);
+        // }
     </script>
 </body>
 
