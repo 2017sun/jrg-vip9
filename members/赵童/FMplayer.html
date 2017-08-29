@@ -160,8 +160,8 @@
             this.$playerIcon.on('mousedown',function(){
                 var intialX = event.clientX,
                     intialY = event.clientY,
-                    ctY = _this.$playerCt.offset().top,
-                    ctX = _this.$playerCt.offset().left,
+                    ctY = parseInt(_this.$playerCt.css('top')),
+                    ctX = parseInt(_this.$playerCt.css('left')),
                     valueX = intialX - ctX,
                     valueY = intialY - ctY;
                 $(this).css('cursor','move');
@@ -351,6 +351,12 @@
                     _this.playMusic();
                 })
             })
+            this.$channelListUl.on('mouseover',function(){
+                    $('body').css('overflow','hidden');
+            });
+            this.$channelListUl.on('mouseleave',function(){
+                    $('body').css('overflow','visible');
+            });
         },
         switchChannel: function(channelId){
             var _this =this;
@@ -432,8 +438,13 @@
         }
     }
 
-
     new FmPlayer();
+    var playTimer = setInterval(function(){
+        if(fm.$audio.attr('src')){
+            fm.playMusic();
+            clearInterval(playTimer);
+        }
+    },500)
 </script>
 </body>
 </html>
